@@ -107,7 +107,8 @@ SELECT
   state,
   city,
   station,
-  last_update,
+  last_update_date,
+  last_update_ts,
   latitude,
   longitude,
   pm2_5_min, pm2_5_max, pm2_5_avg,
@@ -117,6 +118,7 @@ SELECT
   co_min, co_max, co_avg,
   ozone_min, ozone_max, ozone_avg,
   nh3_min, nh3_max, nh3_avg,
+  max_severity,
 
   CASE max_severity
     WHEN 1 THEN 'Good'

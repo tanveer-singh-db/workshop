@@ -8,7 +8,8 @@ SELECT
   state,
   city,
   station,
-  last_update,
+  last_update_date,
+  last_update_ts,
   latitude,
   longitude,
 
@@ -48,4 +49,4 @@ SELECT
   MAX(CASE WHEN pollutant_id = 'NH3' THEN pollutant_avg END) AS nh3_avg
 
 FROM aqi_cleaned
-GROUP BY country, state, city, station, last_update, latitude, longitude;
+GROUP BY country, state, city, station, last_update_date, last_update_ts, latitude, longitude;

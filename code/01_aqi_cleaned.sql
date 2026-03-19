@@ -8,11 +8,15 @@ SELECT
   state,
   city,
   station,
-  TO_TIMESTAMP(last_update, 'dd-MM-yyyy HH:mm:ss') AS last_update,
-  TRIM(latitude)  AS latitude,
-  TRIM(longitude) AS longitude,
+  to_date(last_update, 'dd-MM-yyyy HH:mm:ss') as last_update_date,
+  TO_UTC_TIMESTAMP(TO_TIMESTAMP(last_update, 'dd-MM-yyyy HH:mm:ss'), 'Asia/Kolkata') AS last_update_ts,
+  try_cast(TRIM(latitude) as double)  AS latitude,
+  try_cast(TRIM(longitude) as double) AS longitude,
   pollutant_id,
   CAST(NULLIF(pollutant_min, 'NA') AS DOUBLE) AS pollutant_min,
   CAST(NULLIF(pollutant_max, 'NA') AS DOUBLE) AS pollutant_max,
   CAST(NULLIF(pollutant_avg, 'NA') AS DOUBLE) AS pollutant_avg
 FROM raw_aqi_data;
+
+
+
