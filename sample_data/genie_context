@@ -1,0 +1,110 @@
+Air Quality Dataset
+Overview
+This dataset contains air quality measurements collected from monitoring stations across India. Each record represents the concentration of a specific pollutant at a given station and timestamp.
+Pollutant values are typically measured in:
+	• Micrograms per cubic meter (µg/m³) for PM2.5, PM10, NO2, SO2, O3, NH3
+	• Milligrams per cubic meter (mg/m³) for CO
+
+Pollutants Reference Guide
+1. PM2.5 (Fine Particulate Matter)
+	• Type: Particulate (≤2.5 microns)
+	• Main Sources: Vehicle emissions, biomass burning, industrial processes, construction dust
+	• Description: Extremely fine particles that can penetrate deep into the lungs and bloodstream
+	• Health Effects: Respiratory disease, cardiovascular issues, reduced life expectancy
+    Permissible Limits (India AQI):
+	• Good: 0–30 µg/m³
+	• Satisfactory: 31–60 µg/m³
+	• Moderate: 61–90 µg/m³
+	• Poor: 91–120 µg/m³
+	• Very Poor: 121–250 µg/m³
+	• Severe: >250 µg/m³
+
+2. PM10 (Coarse Particulate Matter)
+	• Type: Particulate (≤10 microns)
+	• Main Sources: Road dust, construction, industrial emissions, windblown dust
+	• Description: Larger particles that affect the upper respiratory tract
+	• Health Effects: Irritation, coughing, aggravated asthma
+    Permissible Limits:
+	• Good: 0–50 µg/m³
+	• Satisfactory: 51–100 µg/m³
+	• Moderate: 101–250 µg/m³
+	• Poor: 251–350 µg/m³
+	• Very Poor: 351–430 µg/m³
+	• Severe: >430 µg/m³
+
+3. NO2 (Nitrogen Dioxide)
+	• Type: Gaseous pollutant
+	• Main Sources: Vehicle exhaust, thermal power plants, industrial combustion
+	• Description: Reactive gas contributing to smog and secondary pollutants
+	• Health Effects: Lung inflammation, reduced immunity, respiratory infections
+    Permissible Limits:
+	• Good: 0–40 µg/m³
+	• Satisfactory: 41–80 µg/m³
+	• Moderate: 81–180 µg/m³
+	• Poor: 181–280 µg/m³
+	• Very Poor: 281–400 µg/m³
+	• Severe: >400 µg/m³
+
+4. SO2 (Sulfur Dioxide)
+	• Type: Gaseous pollutant
+	• Main Sources: Burning of coal and fossil fuels, refineries, power plants
+	• Description: Gas that contributes to acid rain formation
+	• Health Effects: Breathing difficulty, irritation of eyes and throat
+    Permissible Limits:
+	• Good: 0–40 µg/m³
+	• Satisfactory: 41–80 µg/m³
+	• Moderate: 81–380 µg/m³
+	• Poor: 381–800 µg/m³
+	• Very Poor: 801–1600 µg/m³
+	• Severe: >1600 µg/m³
+
+5. CO (Carbon Monoxide)
+	• Type: Toxic gas
+	• Main Sources: Incomplete combustion (vehicles, generators, stoves)
+	• Description: Colorless, odorless gas that reduces oxygen delivery in blood
+	• Health Effects: Headache, dizziness, confusion, fatal at high concentrations
+    Permissible Limits (mg/m³):
+	• Good: 0–1.0
+	• Satisfactory: 1.1–2.0
+	• Moderate: 2.1–10
+	• Poor: 10–17
+	• Very Poor: 17–34
+	• Severe: >34
+
+6. O3 (Ozone – Ground Level)
+	• Type: Secondary gaseous pollutant
+	• Main Sources: Formed by sunlight-driven reactions between NOx and VOCs
+	• Description: Not emitted directly; forms in presence of sunlight
+	• Health Effects: Chest pain, throat irritation, worsens asthma
+    Permissible Limits:
+	• Good: 0–50 µg/m³
+	• Satisfactory: 51–100 µg/m³
+	• Moderate: 101–168 µg/m³
+	• Poor: 169–208 µg/m³
+	• Very Poor: 209–748 µg/m³
+	• Severe: >748 µg/m³
+
+7. NH3 (Ammonia)
+	• Type: Gaseous pollutant
+	• Main Sources: Agricultural activities, fertilizers, livestock waste
+	• Description: Alkaline gas with strong odor
+	• Health Effects: Eye irritation, skin burns, respiratory distress
+    Permissible Limits:
+	• Good: 0–200 µg/m³
+	• Satisfactory: 201–400 µg/m³
+	• Moderate: 401–800 µg/m³
+	• Poor: 801–1200 µg/m³
+	• Very Poor: 1201–1800 µg/m³
+	• Severe: >1800 µg/m³
+
+SUGGESTIONS
+	• Each row represents one pollutant measurement at a station and time
+	• Use pollutant_avg as the primary value for AQI computation
+	• AQI is determined by the worst (highest severity) pollutant at a given time and location
+	• Handle missing values (NA) as unavailable measurements
+	• CO values are in mg/m³, while others are in µg/m³ — do not mix units
+
+
+
+
+
